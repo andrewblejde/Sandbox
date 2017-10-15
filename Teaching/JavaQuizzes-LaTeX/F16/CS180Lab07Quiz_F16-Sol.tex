@@ -1,0 +1,86 @@
+\Instructions
+
+\begin{enumerate}
+    
+\item \pts{2.5} How many times will the following while loop execute?
+\begin{lstlisting}
+int i = 0;
+while( i < 1 ) {
+    i--;
+    if (i % 2 == 1)
+    	break;
+}
+
+\end{lstlisting}
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice 0 times\newline
+ 
+ \choice 1 time \newline
+ 
+ \choice 2 times \newline
+ 
+ \choice Infinite times \newline
+ 
+ \Ans In Java the mod of a negative odd number and 1 will return -1, for this reason this code will run \textbf{almost} infinite times. Even though theoretically this would be an infinite loop, Java ignores overflow and underflow of integers. So once we have reached the lowest supported number, subtracting one from it will return the highest possible number. So this loop will run for at most $Integer.MAX\_VALUE$ times.
+ 
+ Both B and D were considered correct for grading purposes, as in other programming languages, -1 mod 1 will return 1 and the loop will finish after 1 iteration. 
+ 
+\end{oneparchoices}
+
+\item \pts{2} How many times will the following while loop execute? 
+\begin{lstlisting}
+do {
+	System.out.println("Hello");
+}
+while(false);
+\end{lstlisting}
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice 0 times\newline
+ 
+ \choice \Ans 1 time \newline
+ 
+ \choice Infinite times \newline
+ 
+\end{oneparchoices}
+\item \pts{2} \tf The value of quality after this switch statement executes is 0. 
+
+\begin{lstlisting}
+
+int quality = 0;
+switch('A') {
+	case 'A':
+		quality = 4;
+	case 'B':
+		quality = 3;
+	case 'C':
+		quality = 2;
+	case 'D':
+		quality = 1;
+	default:
+		quality = 0;
+}
+\end{lstlisting}
+\Ans True, no break statement for each case.
+
+\item \pts{2.5} \tf The last value printed to the console is 5. Explain
+
+\begin{lstlisting}
+for( int i = 0; i < 5; i++)
+	System.out.println(i);
+\end{lstlisting}
+
+\Ans False, the last value that goes through is 4. 
+
+\clearpage
+
+
+\clearpage
+\ifdraft \clearpage \fi
+
+\end{enumerate}   
+\end{document}
+              

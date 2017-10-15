@@ -1,0 +1,68 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\input{header.tex}
+
+\title{Lab 5 Quiz}
+\date{Week 5}
+\begin{document} 
+
+\Instructions
+\begin{enumerate}
+\newline
+
+ \item \pt{1} \tf
+The following code will print "Hello" once.
+\begin{lstlisting}
+do {
+    System.out.println("Hello");
+}
+while(false);
+\end{lstlisting}
+
+ \item \pt{1} \tf
+The last value printed to the console is 5.
+\begin{lstlisting}
+for( int i = 0; i < 5; ++i)
+    System.out.println(i);
+\end{lstlisting}
+
+ \item \pts{2} \tf
+The string printed to the console is "john"
+\begin{lstlisting}
+String name = "JOHN";
+name.toLowerCase();
+System.out.println(name);
+\end{lstlisting}
+
+
+\item \pts{2} 
+Complete the 3 conditions in the for loop so that all multiples of 3 from 3 to 36 are printed to the console.
+
+\begin{lstlisting}
+for(       ;        ;        )
+    System.out.println(   );
+\end{lstlisting}
+
+
+\ifdraft \clearpage \fi
+\item \pts{4} How will Java evaluate each expression? Write the result in the adjacent cell.
+\begin{table}[!htb]
+\setlength{\tabcolsep}{3em}
+\centering	
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|l| } \hline
+\textbf{e.g.} \texttt{int val = 3 + (int)5.0;
+}& \textbf{8} \\ \hline
+
+\texttt{double i = 5 / 2;} &     \\ \hline
+
+\texttt{int j = 5 / 2;}&   \\ \hline
+
+\texttt{String h = new String("Hello"); h == "Hello"; }&    \\ \hline
+
+\texttt{String str;}&    \\ \hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+\end{document}
+              

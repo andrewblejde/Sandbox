@@ -1,0 +1,1572 @@
+\documentclass[S17-Final.tex]{subfiles}
+\begin{document}
+
+\section*{Part A -- Quick Questions (5 pts)}
+\begin{enumerate}
+\label{sec:one}
+
+\item What is the value of this expression:
+\begin{lstlisting}
+Integer.MIN_VALUE - 1 == Integer.MAX_VALUE
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{True}  
+\item  \texttt{False}
+\end{enumerate}
+
+\item What is the value of this expression: 
+\begin{lstlisting}
+1 / 10 == 0.1
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{True}
+\item  \texttt{False}  
+\end{enumerate}
+
+\item What is the value of this expression:
+\begin{lstlisting}
+ new String("Hi") instanceof Object
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{True} 
+\item  \texttt{False}  
+\end{enumerate}
+
+\item What is the value of this expression:
+\begin{lstlisting}
+ new Integer(5) == new Integer(5)
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{True}
+\item  \texttt{False} 
+\end{enumerate}
+
+\item A class can extend more than one class.
+
+\begin{enumerate}
+\item  \texttt{True}
+\item  \texttt{False}
+\end{enumerate}
+
+\item A class can implement more than one interface.
+
+\begin{enumerate}
+\item  \texttt{True} 
+\item  \texttt{False}  
+\end{enumerate}
+\clearpage
+\item What is the value of the boolean variable output?
+\begin{lstlisting}
+boolean output = (4 > 5 && 5-6 < 0) || false;
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{True}
+\item  \texttt{False}  
+\end{enumerate}
+
+\item You can directly compare a \texttt{char} type an \texttt{int} type in Java.
+
+\begin{enumerate}
+\item  \texttt{True} 
+\item  \texttt{False}  
+\end{enumerate}
+
+\item A \texttt{short} type is 8 bits.
+
+\begin{enumerate}
+\item  \texttt{True}
+\item  \texttt{False} 
+\end{enumerate}
+
+\item Strings are immutable in Java.
+
+\begin{enumerate}
+\item  \texttt{True} 
+\item  \texttt{False}  
+\end{enumerate}
+
+\clearpage
+\section*{Part B -- Concept Questions (50 pts)}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    String s = null;
+    s += "Hello, world!";
+    System.out.println(s);  
+\end{lstlisting}
+
+\begin{enumerate}
+\item  \texttt{null}
+\item  "Hello, world"
+\item "nullHello, world"
+\item "null"
+\item \texttt{NullPointerException}
+\end{enumerate}
+
+\item Which of the following are valid methods that concatenate a \texttt{String s2} to another \texttt{String, s1} in Java?
+\begin{lstlisting}
+    (i)     s1.strcat(s2);
+    (ii)    s1.concat(s2);
+    (iii)   s1.append(s2);
+\end{lstlisting}
+
+\begin{enumerate}
+\item  (i) only
+\item  (i) and (ii)
+\item  (ii) only
+\item  (i) and (iii)
+\item  (iii) only
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    String s = "null";
+    String t = null;
+    System.out.println(s.equals(t));
+\end{lstlisting}
+
+\begin{enumerate}
+\item \texttt{true}
+\item \texttt{false}
+\item \texttt{null}
+\item Compile Time Error
+\item Runtime Error
+\end{enumerate}
+
+\clearpage
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    String sOne = "Hello";
+    String sTwo = "Hello";
+    sOne = sOne == sTwo ? sOne.substring(1) : sOne.substring(2);
+    System.out.println(sOne);
+\end{lstlisting}
+
+\begin{enumerate}
+\item "Hello"
+\item "llo"
+\item "ello"
+\item Compile Time Error
+\item "H"
+\end{enumerate}
+
+\item What is the value of sOne after the execution of the following lines of code?
+\begin{lstlisting}
+    String sOne = "Hello";
+    sOne.substring(1);
+    sOne.concat(", world!");
+    sOne.replaceAll("l", "1");
+\end{lstlisting}
+
+\begin{enumerate}
+\item "Hello"
+\item "llo"
+\item "Hello, world!"
+\item "ello, world!"
+\item "H"
+\end{enumerate}
+
+\item Given the following main method in a class named Test;
+\begin{lstlisting}
+    public class Test {
+	    public static void main(String[] args) {
+		    System.out.println(args.length);
+	    }
+    }
+\end{lstlisting}
+	After compiling, what is the output of the following command: 
+	\texttt{java Test "Hello World"}
+\begin{enumerate}
+\item 0
+\item 1
+\item 2
+\item 3
+\item Error
+\end{enumerate}
+
+\item What will be written to console by the following snippet?
+\begin{lstlisting}
+    String[] arr = "They were the best of times".split(" ");
+    System.out.println(arr.length);
+
+\end{lstlisting}
+	
+\begin{enumerate}
+\item 0
+\item 1
+\item 5
+\item 6
+\item Error
+\end{enumerate}
+
+\item Which of the following expressions will result in a double value?
+\begin{lstlisting}
+    (i) 11 * 0.2
+    (ii) (int) 11 * 0.2
+    (iii) 11 * (int) 0.2
+    (iv) (int)(11 * 0.2)
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  (i) only
+\item  (i) and (ii)
+\item  (ii) only
+\item  (ii) and (iv)
+\item  (iii) and (iv)
+\end{enumerate}
+
+\item What is 1001001 (binary base 2 number system) converted to hexadecimal (base 16 number system)
+	
+\begin{enumerate}
+\item  49
+\item  59
+\item  48
+\item  4A
+\item  4B
+\end{enumerate}
+
+\item What does it mean when a class's field (instance variable) is private?
+	
+\begin{enumerate}
+\item  It can be directly accessed from any class, including the class it is defined in
+\item  It can be directly accessed from any subclass, including the class it is defined in
+\item  It can be directly accessed from any class in the same package, including the class it is defined in
+\item  It can be directly accessed only in the class it is defined in
+\item  It can be directly accessed by any superclass, including the class it is defined in
+\end{enumerate}
+\clearpage
+
+\item What is the output of the following class when instantiating a new Point object using the parameter-less constructor?
+\begin{lstlisting}
+    public class Point {
+		private int x;
+		private int y;
+		
+		public Point(int x, int y) {
+			this.x = x;
+			this.y = y;
+			System.out.print("Hello. ");
+		}
+		
+		public Point() {
+			this(0, 0);
+			System.out.print("Goodbye. ");
+		}
+	}
+
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  "Goodbye."
+\item  "Hello. Goodbye. "
+\item  "Hello. "
+\item  "Goodbye. Hello. "
+\item  Nothing will be outputted
+\end{enumerate}
+
+\item Which of the following is true for a class named Foo that is final? Eg
+\begin{lstlisting}
+    final class Foo {
+		//Contents of class here
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  Foo class cannot be extended
+\item  Foo cannot be subclassed
+\item  Both A and B
+\item  all references to objects of a class would act as if they were declared as final
+\item  None of the above
+\end{enumerate}
+
+
+\item Which of the following can be overloaded?
+	
+\begin{enumerate}
+\item  Constructors
+\item  Methods
+\item  Objects
+\item  Both A and B
+\item  All of the above
+\end{enumerate}
+
+\item Which of the following is incorrect?
+
+\begin{enumerate}
+\item  a static method cannot call a non-static method
+\item  a static method can only access static data
+\item  a static method cannot refer to \texttt{this} or \texttt{super}
+\item  all references to objects of class declared as final would act as if they were declared as final
+\item  All of the above are correct
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    int x = 4;
+    if (x == 4)
+        System.out.print(" CS180");
+	 if (x % 2 == 0) 
+        System.out.print(" CS182");
+    else
+        System.out.print(" CS240");	
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  " CS180"
+\item  " CS182 CS240"
+\item  " CS180 CS182"
+\item  " CS182"
+\item  " CS180 CS240"
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    int sum = 0;
+    int x = 2;
+    switch (x) {
+        default: sum /= 2;
+        case 1: sum += 1;
+        case 2: sum += 2;
+        case 3: sum += 3;
+        case 4: sum += 4;
+        case 5: sum += 5;
+	}
+	System.out.print(sum);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  2
+\item  6
+\item  11
+\item  14
+\item  7
+\end{enumerate}
+
+\item Which of the following statements is incorrect?
+	
+\begin{enumerate}
+\item  a switch statement is a more efficient way to write than a set of nested if conditions
+\item  two case labels in a switch statement can be identical in terms of values
+\item  switch statements can only test for equality while if can evaluate a boolean expression
+\item  Creating nested switch statements is possible
+\item  All of the above are correct
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    class Test {
+        public static void main(String args[]) {
+            int x, y = 1;
+            x = 10;
+            if (x != 10 && x / 0 == 0)
+                System.out.println(y);
+            else
+                System.out.println(++y);
+        }
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  2
+\item  1
+\item  Runtime error - division by zero
+\item  Compile error
+\item  None of the above
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    char x = 'A';
+    while(x != 'D') { 
+        switch(x) { 
+            case 'A': 
+                System.out.print(x + " "); x = 'D'; 
+            case 'B': 
+                System.out.print(x + " "); x = 'C'; 
+                break; 
+            case 'C': 
+                System.out.print(x + " "); x = 'D'; 
+            default: continue;
+        }
+    }
+
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  A
+\item  A D
+\item  A D C
+\item  A D C D
+\item  None of the above
+\end{enumerate}
+
+\item How many times would the following loop execute?
+\begin{lstlisting}
+    class Test {
+        public static void main(String args[]) {
+            for(int i = 0; i < 10; ++i) {
+                System.out.println(i);
+            }
+        }
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  9
+\item  10
+\item  11
+\item  0
+\item  Compile Error
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    int sum = 0;
+    for (int i = 10; i > 0; i /= 2) {
+        for (int j = i; j > 1; j -= 2) {
+            if (i % 2 == 0) {
+                sum += 2;
+            }
+        }
+    }
+    System.out.println(sum);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  8
+\item  10
+\item  12
+\item  2
+\item  6
+\end{enumerate}
+
+\item How many times will the following loop execute?
+\begin{lstlisting}
+    do {
+	    System.out.println("CS180");
+    }
+    while(false);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  0
+\item  1
+\item  2
+\item  Infinite
+\item  None of the above
+\end{enumerate}
+
+\item How many times will the following while loop execute?
+\begin{lstlisting}
+    int i = 0;
+    while( ++i < 1 ) {
+        i--;
+        if (i % 2 == 1)
+            break;
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  0 times
+\item  1 time
+\item  Until integer underflow
+\item  Until integer overflow
+\item  None of the above
+\end{enumerate}
+
+\item What will the last value printed to the console be?
+\begin{lstlisting}
+    for( int i = 0; i < 5; ++i)
+        System.out.println(i);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  1
+\item  2
+\item  3
+\item  4
+\item  5
+\end{enumerate}
+
+\item How many times will "execute" be printed to the console?
+\begin{lstlisting}
+    for(int i = 0; i < 5; i++)
+        for(int j = 0; j < 5 && i % 2 != 0; j++)
+	        System.out.println("execute");
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  2 times
+\item  4 times
+\item  5 times
+\item  10 times
+\item  25 times
+\end{enumerate}
+
+\item If I have 3 nested for loops, each starting at 0 and going until a value n, what is the maximum number of iterations I could have (i.e. how many times will this execute in the worst case?) The counter variables for each for-loop are incremented once per iteration and are otherwise not manipulated.
+	
+\begin{enumerate}
+\item  n times
+\item  3n times
+\item  $n^{2}$ times
+\item  $n^{3}$ times
+\item  Impossible to tell from given information
+\end{enumerate}
+
+\item What will be printed to the console after the following code block executes?
+\begin{lstlisting}
+    Integer[] sumThese = new Integer[100]; 
+    int sum = 0; 
+    
+    for ( Integer i : sumThese ) { 
+        sum += i; 
+    } 
+    
+    System.out.println( sum / sumThese.length );
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  0
+\item  1
+\item  100
+\item  \texttt{NullPointerException}
+\item  \texttt{ArithmeticException}
+\end{enumerate}
+
+\item For the array \texttt{int[] arr = \{1, 2, 3, 4, 5\}}, what is the value of \texttt{arr[arr[arr.length/2]]}?
+	
+\begin{enumerate}
+\item  1
+\item  2
+\item  3
+\item  4
+\item  None of the above
+\end{enumerate}
+
+\item What is the output of the following code?
+\begin{lstlisting}
+    int[] arr = { 1 , 2 , 3 , 4 , 5 , 6 };
+    int i = arr.length - 1;
+    while(i > -1) {
+        System.out.print( arr[i--] );
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  123456
+\item  12345
+\item  654321
+\item  65432
+\item  An exception will occur
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    String[] strings = new String[10];
+    int totalLength = 0;
+    for (String s : strings) {
+        totalLength += s.length() * 10;
+    }
+    System.out.print(totalLength);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  10
+\item  0
+\item  100
+\item  \texttt{null}
+\item  \texttt{NullPointerException}
+\end{enumerate}
+
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    boolean[] arr = new boolean[] {true, false, true};
+    boolean out = true;
+    
+    for (boolean b : arr) {
+        out = out && b;
+    } //end for
+    System.out.print(out);
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  1
+\item  \texttt{false}
+\item  \texttt{true}
+\item  0
+\item  -1
+\end{enumerate}
+
+%\item What is the output of the following code snippet?
+%\begin{lstlisting}
+ %   List<String> stringList = new ArrayList<>();
+    %stringList.add("Hello");
+    %stringList.add("World");
+    %stringList.add("CS180");
+    %stringList.remove("CS180 ");
+    %System.out.println(stringList.size() * 2);
+%\end{lstlisting}
+	
+%\begin{enumerate}
+%\item  2
+%\item  3
+%\item  6
+%\item  4
+%\item  0
+%\end{enumerate}
+\clearpage
+\item Consider the following class declarations.
+\begin{lstlisting}
+    public class Super {
+        public void print() {
+            System.out.printf("%.3f", Math.E);
+        }
+    }
+
+    public class Sub extends Super {
+        public void print() {
+            System.out.printf("%.5f", Math.E);
+        }
+    }
+    
+    
+\end{lstlisting}
+What would be the output if in another class, I declared an object of type Super and initialized it as class Sub, then called the print() method? In other words, the following;
+\begin{lstlisting}
+Super s = new Sub();
+s.print();
+\end{lstlisting}
+\begin{enumerate}
+\item  2.7182
+\item  2.718
+\item  2.71828
+\item  2.72
+\item  0
+\end{enumerate}
+\clearpage
+\item What is the output of the following code snippet:
+\begin{lstlisting}
+    public class Foo {
+        public Foo() {
+            System.out.print("Foo ");
+        }
+    }
+    public class Bar extends Foo {
+        public Bar() {
+            System.out.print("Bar ");
+        }
+    } 
+    public class Baz extends Bar {
+        public Baz() {
+            System.out.print("Baz ");
+        }
+    } 
+    //Creating an instance of Baz
+    Baz b = new Baz();
+
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  "Bar Baz "
+\item  "Baz Bar Foo "
+\item  "Baz "
+\item  "Foo Bar Baz "
+\item  "Baz Bar "
+\end{enumerate}
+
+\item Which of the following statements are true in the context of inheritance?\\
+
+    (i) private methods are final\\
+	(ii) protected methods are accessible within a package\\
+	(iii) protected methods are final\\
+	(iv) private methods cannot be overridden\\
+	
+\begin{enumerate}
+\item  (i), (ii) and (iv)
+\item  (i) and (ii)
+\item  (i), (ii) and (iii)
+\item  (ii), (iii) and (iv)
+\item  (ii) and (iv)
+\end{enumerate}
+
+%\item Which of the following statements are true in the context of inheritance?\\
+    
+%    (i) all classes inherit from the Object class directly or indirectly\\
+%	(ii) multiple inheritance is not allowed in Java\\
+%	(iii) a subclass cannot inherit private members of parent class\\
+	
+%\begin{enumerate}
+%\item  (i) and (ii)
+%\item  (i) and (iii)
+%\item  (i), (ii) and (iii)
+%\item  (ii) and (iii)
+%\item  (iii) only
+%\end{enumerate}
+\clearpage
+\item A class \texttt{Fruit} has a subclass \texttt{Orange}. Which of the following statements is true?
+	
+\begin{enumerate}
+\item  Orange can have no subclass
+\item  Orange can have more than one parent class aside from Fruit
+\item  Fruit can have only one subclass
+\item  Orange can have no siblings
+\item  None of the above
+\end{enumerate}
+
+\item Based on the class definition below, what can we infer about the class B?
+\begin{lstlisting}
+    public class B<T extends A> { }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  B extends A
+\item  T extends B
+\item  B is a bounded parameterized type restricted to be of type T which is of type A or a subclass of A itself.
+\item  T is a bounded parameterized type restricted to be of type A or a subclass of A itself.
+\item  None of these are correct.
+\end{enumerate}
+
+\item Which of the following declarations inside the interface are valid?
+\begin{lstlisting}
+    public interface A {
+        void a();                    //A
+        public void b();             //B
+        abstract void c();           //C
+        public abstract void d(); //D
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  A only
+\item  A and B only
+\item  C only
+\item  B only
+\item  All declarations are valid
+\end{enumerate}
+\clearpage
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    interface A {
+        default void print() {
+            System.out.print("A");
+        }
+    }
+
+    interface B {
+        default void print() {
+            System.out.print("B");
+        }
+    }
+    
+    class C implements B, A {
+        public void print() {}
+    }
+ 
+\end{lstlisting}
+What would be the output if I tried the following;
+\begin{lstlisting}
+    A c = new C();
+    c.print();
+\end{lstlisting}
+\begin{enumerate}
+\item  "AB"
+\item  "A"
+\item  "B"
+\item  "BA"
+\item  None of the above 
+\end{enumerate}
+
+\item Classes implementing the ActionListener interface must implement which of the following methods?
+
+\begin{enumerate}
+\item  \texttt{void eventDispatch( .. )}
+\item  \texttt{void actionPerformed( .. )}
+\item  \texttt{void handle( .. )}
+\item  \texttt{String getActionCommand( .. )}
+\item  All of the above
+\end{enumerate}
+\clearpage
+
+\begin{lstlisting}
+    public static void printSquare(String[] nums) throws NullPointerException {
+        for(String str : nums) {
+            str.replaceAll("\\s+",""); // removes white space
+            try {
+                System.out.print(Math.pow(Integer.parseInt(str),2) + "\t");
+            } catch(NumberFormatException e) {
+                System.out.print("Not a number\t");
+            }
+        }
+    }
+
+\end{lstlisting}
+
+
+%\item What would the output be of this method given the parameter
+%\begin{lstlisting}
+%    new String[]{"CS180", "4", "16     "}
+%\end{lstlisting}
+	
+%\begin{enumerate}
+%\item  Not a number 	4	16
+%\item  Not a number	4.0	16.0
+%\item  Not a number	4.0	Not a number	
+%\item  Not a number	4	Not a number
+%\item  \texttt{NullPointerException}
+%\end{enumerate}
+
+\item 	What would the output be of this method given the parameter
+\begin{lstlisting}
+	new String[]{null, "4", "16     "}
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  NullPointerException	4.0	NullPointerException
+\item  Not a number	4.0	16.0
+\item  Not a number	4.0	Not a number	
+\item  \texttt{NullPointerException}
+\item  None of the above
+\end{enumerate}
+
+\item What will the following code output?
+\begin{lstlisting}
+    public static void main(String[] args) {
+        String s = null;
+        try {
+            s = s.substring(0, 5);
+        } catch(IndexOutOfBoundsException ee) {
+            System.out.println("IndexOutOfBoundsException");
+            return;
+        } catch(NullPointerException e){
+            System.out.println("NullPointerException");
+            return;
+        }
+        
+        finally {
+            System.out.println("An exception has occurred");
+        }
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  \texttt{NullPointerException}
+\item  \texttt{IndexOutOfBoundsException}
+\item  \texttt{NullPointerException}\\An exception has occurred
+\item  \texttt{IndexOutOfBoundsException}\\An exception has occurred
+\item  None of the above
+\end{enumerate}
+
+\item Consider the following code:
+\begin{lstlisting}
+    try {
+        File f = new File("finalExam.txt");
+        Scanner inFile = new Scanner(f);
+        while (...) {
+            //read lines
+        }
+    } catch (FileNotFoundException e) {
+        System.err.println("File could not be opened!");
+    }
+\end{lstlisting}
+
+What should replace the ellipses i.e (...) to determine if the end of the file has not been reached yet?
+	
+\begin{enumerate}
+\item  \texttt{!inFile.eof()}
+\item  \texttt{inFile.nextLine()}
+\item  \texttt{inFile.hasNextLine();}
+\item  \texttt{!inFile.isEnd()}
+\item  \texttt{!inFile}
+\end{enumerate}
+
+\item In order to be used with serialization, a class must implement the \texttt{interface}:
+
+\begin{enumerate}
+\item  \texttt{Serialize}
+\item  \texttt{Streamable}
+\item  \texttt{Spliterator}
+\item  \texttt{Serialization}
+\item  \texttt{Serializable}
+\end{enumerate}
+
+\item In Java, all data is stored as a stream which is composed of $\rule{1cm}{0.15mm}$
+	
+\begin{enumerate}
+\item  bits
+\item  bytes
+\item  megabytes
+\item  All of the above
+\item  None of the above
+\end{enumerate}
+\clearpage
+\item What are the ways to read data from user's keyboard?
+	
+\begin{enumerate}
+\item  \texttt{InputStreamReader}
+\item  \texttt{Console}
+\item  \texttt{Scanner}
+\item  \texttt{DataInputStream}
+\item  \texttt{All of the above}
+\end{enumerate}
+
+%\item What is synchronization?
+	
+%\begin{enumerate}
+%\item  It's a process of avoiding clashes when two or more threads try to access the shared pool
+%\item  It's a feature of Java because of which simultaneous access of the shared pool is possible
+%\item  It's a process due to which a method is able to access many threads simultaneously
+%\item  It's a required syntax in Java programming to create threads
+%\item  None of the above
+%\end{enumerate}
+
+\item What is the output of the following program?
+\begin{lstlisting}
+    class Test extends Thread {
+        Thread t;
+        Test() {
+            t = new Thread(this,"My Thread");
+            t.start();
+        }
+        
+        public void run() {
+            try {
+                System.out.println(t.getName());
+                t.join();
+            } catch(Exception e) {
+                System.out.print("Exception");
+            }
+        }
+        
+        public static void main(String args[]) {
+            new Test();
+        }
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  "My Thread"
+\item  Compile Error
+\item  Runtime Error
+\item  No output but program runs without any exception or compile errors
+\item  None of the above
+\end{enumerate}
+\clearpage
+\item Which of the following is not a Thread state?
+	
+\begin{enumerate}
+\item  New
+\item  Sleep
+\item  Runnable
+\item  Terminated
+\item  None of the above
+\end{enumerate}
+
+%\item What is the output of the following code snippet?
+%\begin{lstlisting}
+%    public class A {
+%        public int getNum(int num) {
+%            if (num <= 0) {
+%                return 3;
+%            } else {
+%                return 6 * getNum(num - 2);
+%            }
+%        }
+%    }
+%    
+%    A a = new A();
+%    System.out.print(a.getNum(7));
+%\end{lstlisting}
+	
+%\begin{enumerate}
+%\item  3888
+%\item  108
+%\item  \texttt{StackOverflowException}
+%\item  648
+%\item  18
+%\end{enumerate}
+
+\item What should the recursive case be to find the GCD (greatest common divisor) in the following method?
+\begin{lstlisting}
+
+    public static int findGCD(int num1, int num2) {
+    
+        // Base case to end recursion
+        if (num2 == 0)
+            return num1;
+        else
+            return findGCD(.........);
+        }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  num1, num2 \% num1
+\item  num1, num1 \% num2
+\item  num2, num1 \% num2
+\item  num2, num2 \% num1
+\item  None of the above
+\end{enumerate}
+\clearpage
+\item What is the output of the following code snippet?
+\begin{lstlisting}
+    public class Box<T> {
+        private T value;
+        
+        public boolean equals(Box b) {
+            return this.value.equals(b.value);
+        }
+    }
+    Box<Double> bOne = new Box<> (1.0 / 10.0);
+    Box<Double> bTwo = new Box<> (1.0 / 10.0);
+    System.out.println(bOne.equals(bTwo) ? bOne == bTwo ? "true" : "false" : bOne == bTwo ? "false" : "true");
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  \texttt{false}
+\item  \texttt{truefalse}
+\item  \texttt{true}
+\item  \texttt{falsetrue}
+\item  18
+\end{enumerate}
+
+\item Which of the following statements is incorrect in the context of dynamic data structures?
+	
+\begin{enumerate}
+\item  Dynamic data structures are flexible in size
+\item  Dynamic data structures are always faster than static data structures
+\item  LinkedList is a dynamic data structure
+\item  Dynamic data structures may end up taking more memory than static data structures for certain use cases
+\item  None of the above
+\end{enumerate}
+\clearpage
+%\item Consider the following code:
+%\begin{lstlisting}
+%    public class Person {
+%        public String toString() {
+%            return "Person";
+%        }
+%    }
+    
+%    public class Student extends Person {
+%        public String toString() {
+%            return "Student";
+%        }
+%    }
+
+ %   public class Professor extends Person {
+ %       public String toString() {
+ %           return "Professor";
+ %       }
+ %   }
+
+ %   Person[] personArr = new Person[] {new Student(), new Person(), new Professor(), new Professor()};
+
+%    for (Person p : personArr) {
+%        System.out.print(p + " ");
+%    }
+%\end{lstlisting}
+	
+%\begin{enumerate}
+%\item  "Student@6d06d69c Person@7852e922 Professor@4e25154f Professor@70dea4e "
+%\item  "Person Person Person Person"
+%\item  "Student Person Professor Professor "
+%\item  "Person@6d06d69c Person@7852e922 Person@4e25154f Person@70dea4e "
+%\item  Compile-time error
+%\end{enumerate}
+\clearpage
+\section*{Section 3 -- Applied Questions (45 pts)}
+\item What should our while condition be on line 16 to properly check for terminating condition?
+\begin{lstlisting}
+    public static double nthRoot(double value, int root) {
+  		if(value <= 0 || root == 0)
+    		return 0;
+
+		double epsilon =  0.000000001;
+		
+		double x_k;
+		double x_k_new;
+		double delta_x = 1;
+		
+		if(root > 0)
+		    x_k = value;
+		else
+		    x_k = 1/value;
+
+16.      while(........) {
+          x_k_new = (1/root) * (((root -1) * x_k) + (value/(Math.pow(x_k, root-1))));
+   		    
+            delta_x = Math.abs(x_k_new - x_k);
+            x_k = x_k_new;
+        }
+	
+        return x_k;
+    }
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  delta\textunderscore x \textless{} epsilon
+\item  delta\textunderscore x {!=} epsilon
+\item  delta\textunderscore x \textgreater{} epsilon
+\item  \texttt{true}
+\item  None of the above
+\end{enumerate}
+
+\item Referring to the above code, what would be returned for the parameters value = 4, root = 2?
+	
+\begin{enumerate}
+\item  0
+\item  2
+\item  4
+\item  \texttt{NaN}
+\item  Error
+\end{enumerate}
+\clearpage
+\item Use the below main method, paired with the above nthRoot method, in a class called MathUtils for the following question.
+\begin{lstlisting}
+    public static void main(String[] args) {
+		this.nthRoot(4.0, 2);            //A
+		nthRoot(4.0, 2);                 //B
+		new MathUtils().nthRoot(4.0, 2); //C
+		MathUtils.nthRoot(4.0, 2);       //D
+	} //main
+
+\end{lstlisting}
+What is the correct way to invoke the nthRoot() method in main()?
+\begin{enumerate}
+\item  C
+\item  A & B
+\item  C & D
+\item  B, C & D
+\item  All of them
+\end{enumerate}
+\clearpage
+\textbf{Use the following Code & Output for the next 4 questions:}
+
+\begin{lstlisting}
+    public class MyArrayList<T>  {
+        public int size;
+        private T[] array;
+        public MyArrayList() {
+            array = (T[]) new Object[7];
+        }
+        
+        public boolean contains(Object o) {
+            return indexOf(o) != -1;
+        }
+        
+        public void add(T t) {
+            if(size > array.length - 1) {
+                T[] resized = (T[]) new Object[array.length *
+                2];
+                System.arraycopy(array, 0, resized, 0
+                array.length);
+                array = resized;
+            }
+            
+            array[size++] = t;
+        }
+        
+        public int indexOf(Object o) {
+            for (           Q66 below           )
+            
+            return -1;
+        } 
+        
+        public static void main(String[] args)  {
+            MyArrayList<Integer> list = new MyArrayList<Integer>();
+            list.add(1);
+            list.add(2);
+            list.add(3);
+            
+            System.out.println(list.contains(2));
+            System.out.println(list.getLength());
+        }
+    }
+\end{lstlisting}
+
+\textbf{Output:}
+\begin{lstlisting}
+    true
+    4
+\end{lstlisting}
+\clearpage
+\item \textless T \textgreater is called a generic
+	
+\begin{enumerate}
+\item  Element
+\item  Key
+\item  Type
+\item  Object
+\item  None of the above
+\end{enumerate}
+
+\item Instead of \texttt{System.arraycopy(array, 0, resized, 0, array.length)}, how could we copy the the existing elements to our new array resized?
+	
+\begin{enumerate}
+\item  \texttt{for(T item : array)\\
+        add(item);}
+\item  \texttt{for(int i = 0; i < array.length; i++)\\
+     resized[i] = array[i];}
+\item  \texttt{int i = 0;\\
+  while(i++ < size)
+     resized[--i] = array[i++];}
+\item  Both A \& B
+\item  Both B \& C
+\end{enumerate}
+
+\item What should the for loop be to look at all of the elements we have added in the \texttt{indexOf()} method?
+	
+\begin{enumerate}
+\item  \texttt{for(int i = 0; i < array.length; i++)}
+\item  \texttt{for(int i = 0; i < size; i++)}
+\item  \texttt{for(T t : array)}
+\item  A \& B
+\item  B \& C
+\end{enumerate}
+
+\item Complete the \texttt{indexOf()} method to work with any standard java object (e.g. Integer, Double, String etc). You can assume you will have an item t and the current index you are examining is i.
+	
+\begin{enumerate}
+\item  \texttt{if(t == o)\\
+    return i;}
+\item  \texttt{if(t.equals(o))\\
+    return i;}
+\item  \texttt{if(o.equals(t))\\
+    return i;}
+\item  A \& B
+\item  B \& C
+\end{enumerate}
+
+%\item Consider the following code:
+%\begin{lstlisting}
+%    public interface A {
+%        default void print() {
+%            System.out.print("A");
+%        }
+%    }
+    
+%    public class B {
+%        public void print() {
+%            System.out.print("B");
+%        }
+%    }
+    
+%    public class C extends B implements A {
+%        ...
+%    }
+    
+%    A c = new C();
+%\end{lstlisting}
+	
+%\begin{enumerate}
+%\item  "B"
+%\item  "AB"
+%\item  "BA"
+%\item  "A"
+%\item  Compile Time Error
+%\end{enumerate}
+
+%\item Consider the following code:
+%\begin{lstlisting}
+%   public interface Z {
+%		default void printPi() {
+%			System.out.printf("%.3f\n", Math.PI);
+%		}
+%	}
+
+%	public interface Y extends Z {
+%		default void printPi() {
+%			System.out.printf("%.6f\n", Math.PI);
+%		}
+%	}
+
+%	public interface X extends Y {
+%		default void printPi() {
+%			System.out.printf("%.9f\n", Math.PI);
+%		}
+%	}
+
+%	public interface W extends X {
+%		default void printPi() {
+%			System.out.printf("%.12f\n", Math.PI);
+%		}
+%	}
+
+%	public class V implements X, W, Z, Y {
+%		...
+%	}
+
+%	Y y = new V();
+
+%\end{lstlisting}
+
+%What is the output of \texttt{y.printPi()}?
+%\begin{enumerate}
+%\item  3.141592654
+%\item  3.142
+%\item  3.141592653590
+%\item  3.141593
+%\item  Compile Time Error
+%\end{enumerate}
+\clearpage
+\textbf{Consider the following code for the next 4 questions}
+
+\begin{lstlisting}
+
+import java.util.concurrent.atomic.AtomicInteger;
+  
+public class Increment extends Thread {
+  
+   private static int count;
+   private static Object monitor;
+   private static AtomicInteger counter;
+  
+   public Increment() {
+       monitor = new Object();
+       counter = new AtomicInteger();
+   }
+  
+   public void increment0() {
+       counter.getAndIncrement();
+   }
+  
+   public synchronized void increment1() {
+       count++;
+   }
+   public void increment2() {
+       synchronized (monitor) {
+           count++;
+       }
+   }
+  
+   public void increment3() {
+       count++
+   }
+  
+   @Override
+   public void run() {
+       for (int i = 0; i < 1000; i++)
+           increment3();
+   }
+  
+   public static void main(String[] args) {
+       Thread[] thr = new Thread[3];
+       for(int i = 0; i < 6; i++)
+       {
+           if(i < thr.length)
+               thr[i] = new Thread(new Increment());
+           else
+               thr[i - 3].start();
+       }
+  
+       try {
+  
+           for(int i = 0; i < thr.length; i++)
+               thr[i].join();
+  
+           System.out.println("count: " + count);
+           System.out.println("count: " + counter.get());
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+       }
+   }
+}
+\end{lstlisting}
+
+\item Which increment methods when called in the run() method will produce the desired thread-safe output?
+	
+\begin{enumerate}
+\item  \texttt{increment0(), increment1()}
+\item  \texttt{increment0(), increment2()}
+\item  \texttt{increment1(), increment2(), increment3()}
+\item  \texttt{increment0(), increment1(), increment2()}
+\item  \texttt{increment0(), increment2(), increment3()}
+\end{enumerate}
+
+\item What are the maximum number of threads running in this program?
+
+\begin{enumerate}
+\item  0
+\item  1
+\item  2
+\item  3
+\item  4
+\end{enumerate}
+\clearpage
+\item Imagine you have a public facing application that utilizes a class where you have an Object monitor, where the Object monitor is shared globally. What keywords should be associated in the declaration of this object to prevent malicious users from denying access to others?
+\begin{lstlisting}
+    I. public
+    II. private
+    III. static.
+    IV. final
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  1
+\item  2
+\item  3
+\item  4
+\item  None of these
+\end{enumerate}
+
+\item Why might you prefer to implement the Runnable interface instead of extending the Thread class?
+	
+\begin{enumerate}
+\item  Implementing Runnable allows threads to share an instance, whereas extending Thread requires instantiating a new instance for each worker thread.
+\item  Extending Thread would make your class an instance of a Thread object, which may restrict your ability to extend your class in the future.
+\item  Extending Thread creates unnecessary overhead within subclasses by extending what may be unnecessary functionality.
+\item  All of the above
+\item  None of the above
+\end{enumerate}
+
+\textbf{The following class(es) will be used for the next 4 questions}
+
+\begin{lstlisting}
+public class List {
+  public Node head;
+  
+  public List(Object data) {
+    this.head = new Node(data);
+  }
+
+  public void add(Object data) {
+    Node curr = head;
+
+    while(curr.next != null) {
+      curr = curr.next;
+    }
+
+    curr.next = new Node(data);
+  }
+
+  public Node remove() {
+    Node curr = head;
+    
+    head = curr.next;
+
+    return curr;
+  }
+  public Node removeNodeByData(Object data) {
+    Node curr = head;
+    Node prev = head;
+
+    while(curr.next != null && curr.data != data) {
+
+    prev = curr;
+    curr = curr.next;
+    }
+    return curr;
+  }
+
+  public void reverseList(Node node) {
+    Node current = node;
+    Node list = current.next;
+
+
+    if(list == null) {
+      head = current;
+      return;
+    }
+
+    reverseList(list);
+    current.next.next = current;
+
+    current.next = null;
+
+  }
+
+  public void print(Node node) {
+    if(node == null)
+      return;
+    else
+      print(node.next);
+
+    System.out.println(node.data);
+
+  }
+}
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}
+class Node {
+  public Node next;
+  public String data;
+  
+  public Node(String data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+\end{lstlisting}
+
+\item The above \texttt{List} class is an example of a
+	
+\begin{enumerate}
+\item  FIFO Queue
+\item  LIFO Queue
+\item  Both LIFO and FIFO
+\item  None of the above
+\item  LILO Queue
+\end{enumerate}
+
+\item Say we add have the following main method in the List class
+\begin{lstlisting}
+public static void main(String[] args) {
+    List l = new List("Hello");
+    l.add("World");
+    l.add("CS180");
+    l.add("Purdue");
+    l.add("Lawson");
+    l.reverseList(l.head);
+}
+\end{lstlisting}
+	
+What will the result be of a call to l.print(l.head)?
+
+\begin{enumerate}
+\item  Hello\\
+	    World\\
+	    CS180\\
+	    Purdue\\
+	    Lawson
+\item  Lawson\\
+	    Purdue\\
+	    CS180\\
+    World\\
+    Hello
+\item  The String references (e.g. String@12345) each on a new line.
+\item  The Object references (e.g. Object@12345) each on a new line.
+\item  \texttt{StackOverFlowException}
+\end{enumerate}
+\clearpage
+\item Our list contains those 5 items above, now what would the head Node's data item be after the following operation:
+\begin{lstlisting}
+    removeNodeByData("Hello")
+\end{lstlisting}
+	
+\begin{enumerate}
+\item  Hello
+\item  World
+\item  Lawson
+\item  Purdue
+\item  CS180
+\end{enumerate}
+
+\item What is the correct way to get a String object from our Node data item?
+
+\begin{enumerate}
+\item  \texttt{String str = l.remove().data.toString();}
+\item  \texttt{String str = (Node)l.remove().data;}
+\item  \texttt{String str = (String)l.remove();}
+\item  \texttt{String str = (String)l.remove().data;}
+\item  None of the above
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

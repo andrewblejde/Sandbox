@@ -1,0 +1,63 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\input{header.tex}
+
+\title{Lab 2 Quiz}
+\date{Week 2}
+\begin{document} 
+
+\Instructions
+\begin{enumerate}
+
+\item \pts{6} Break down CS180 into 3 abstractions, each with 2 operations and 2 quantities. \newline
+(e.g. \textit{Wheel} class has an operation \textif{rotate} with a quantity \textit{radius}).
+\newline
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+\textbf{Abstraction (Class)}& \textbf{Operation (Method)}& \textbf{Quantity(Variable)} \\
+\hline
+&   &   \\ 
+\multirow{\textbf{e.g. Student}} & \textbf{e.g. Completes homework, attends lecture} & \textbf{e.g. Name, PUID} \\ 
+&   &   \\ 
+\hline
+&   &   \\
+TA & Answers questions, grades labs  & Name, classification  \\ 
+&   &   \\ 
+\hline
+&   &   \\
+Professor & Lectures material, posts grades  & Name, email  \\ 
+&   &   \\ 
+\hline
+\end{tabular}
+\end{center}
+\Ans These are just examples.
+\vspace{1em}
+
+
+\item \pts{2} Describe an algorithm (i.e. a series of steps) to convert a negative binary number represented in \textbf{two's-complement} to its base 10 equivalent.
+\newline
+\Ans \newline
+Flip the bits, add one, then convert to decimal.
+\newline
+
+\item \pts{2} Convert 126_10. Show your work.
+\newline
+\Ans \newline
+126  /  2 = 63,  Rem: 0 \newline
+63  /  2 = 31,  Rem: 1 \newline
+31 / 2 = 15,  Rem: 1 \newline
+15 / 2 = 7, Rem: 1 \newline
+7 / 2 = 3, Rem: 1 \newline
+3 / 2 = 1, Rem: 1 \newline
+1 / 2 = 0, Rem: 1 \newline
+\newline
+= 1111110_2
+\newline
+
+
+\end{enumerate}
+\end{document}
+              

@@ -1,0 +1,45 @@
+\Instructions
+   Explain your reasoning to obtain partial credit.
+\begin{enumerate}
+    
+\item \pts{2} \tf The element at index 1 of arr is A.
+\begin{lstlisting}
+char[] arr = {'A' , 'B' , 'C' , 'D'};
+\end{lstlisting}
+
+\item \pts{2} Complete the code below for a 2-dimensional jagged array \texttt{arr}. A jagged array is an array whose elements are arrays. The elements of a jagged array can be of different dimensions and sizes. 
+\begin{lstlisting}
+for(int i = 0; i < arr.length; i++) {
+	for( /* your code here */ ) {
+    	...
+    }
+}
+\end{lstlisting}
+ 
+\item \pts{2} \tf Using the array from Q1 as an example, the last element of the array can be retrieved to a variable \texttt{lastElement} of type char by the statement
+\begin{lstlisting}
+char lastElement = arr[arr.length];
+\end{lstlisting}
+
+\item \pts{4} Given the following snippet of code, write the output printed to stdout. 
+
+\begin{lstlisting}
+int[][] arr = {{1/8, 2/8, 3/8},
+			   {4/8, 5/8},
+			   {6/8}};
+
+for(int i = 0; i < arr.length; i++) {
+	for(int j = 0; j < arr[i].length; j++)
+		System.out.print(arr[i][j] + " ");
+	System.out.println();
+}
+\end{lstlisting}
+
+\clearpage
+
+\clearpage
+\ifdraft \clearpage \fi
+
+\end{enumerate}   
+\end{document}
+              

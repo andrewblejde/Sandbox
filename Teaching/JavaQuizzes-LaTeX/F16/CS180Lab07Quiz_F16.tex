@@ -1,0 +1,79 @@
+\Instructions
+  Explain your reasoning to obtain partial credit.
+\begin{enumerate}
+    
+\item \pts{2.5} How many times will the following while loop execute? 
+\begin{lstlisting}
+int i = 0;
+while( i < 1 ) {
+    i--;
+    if (i % 2 == 1)
+    	break;
+}
+
+\end{lstlisting}
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice 0 times\newline
+ 
+ \choice 1 time \newline
+ 
+ \choice 2 times \newline
+ 
+ \choice Infinite times \newline
+ 
+ 
+\end{oneparchoices}
+
+\item \pts{2.5} How many times will the following while loop execute? 
+\begin{lstlisting}
+do {
+	System.out.println("Hello");
+}
+while(false);
+\end{lstlisting}
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice 0 times\newline
+ 
+ \choice 1 time \newline
+ 
+ \choice Infinite times \newline
+ 
+\end{oneparchoices}
+\item \pts{2.5} \tf The value of quality after this switch statement executes is 0.
+
+\begin{lstlisting}
+
+int quality = 0;
+switch('A') {
+	case 'A':
+		quality = 4;
+	case 'B':
+		quality = 3;
+	case 'C':
+		quality = 2;
+	case 'D':
+		quality = 1;
+	default:
+		quality = 0;
+}
+\end{lstlisting}
+
+\item \pts{2.5} \tf The last value printed to the console is 5.
+
+\begin{lstlisting}
+for( int i = 0; i < 5; i++)
+	System.out.println(i);
+\end{lstlisting}
+
+\clearpage
+
+\clearpage
+\ifdraft \clearpage \fi
+
+\end{enumerate}   
+\end{document}
+              

@@ -1,0 +1,79 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\input{header.tex}
+
+\title{Lab 09 Quiz}
+\date{Week 9}
+\begin{document} 
+
+\Instructions
+
+\begin{enumerate}
+\vspace{2em}
+
+Consider the following code for questions 1, 2, 3 and 4.
+\begin{lstlisting}
+class A  {
+    public A(String msg)  { }
+}  
+class B extends A  {
+    public B() {
+         this("Hello World");		/* #1 */
+    }
+    public B(String str) {
+        super(str);				    /* #2 */
+    }
+}  
+class C extends B {
+	public static void main(String[] args) {
+    		A ab = new B();			/* #3 */
+			C c = new C(); 		/* #4 */
+	}
+}
+\end{lstlisting}
+
+\item \pts{2} \tf  \#1 calls the superclass Constructor of A immediately.
+\vspace{1em}
+
+\Ans False.
+
+\item \pts{2} \tf  \#2 calls the superclass Constructor of A immediately.
+\vspace{1em}
+
+\Ans True.
+
+\item \pts{2} \tf \#3: ab \textcolor{blue}{instanceof} A \textbf{\&\&} ab \textcolor{blue}{instanceof} B  evaluates to  \textbf{true.}
+\vspace{1em}
+
+\Ans True.
+
+\item
+
+\question \pts{2} What is the proper constructor chain for \#4?
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice Will go straight to B()\newline
+ 
+ \choice Will go straight to B() then to B(String str) then to A(String msg) \newline
+ 
+ \choice Will go to default constructor C() then to B() then to B(String str) then to A(String msg) \newline
+ 
+ \choice Will go straight to A(String msg) \newline
+
+\end{oneparchoices}
+\Ans C.
+\item \pt{1} \tf A class can extend multiple classes.
+
+\Ans False. 
+
+\vspace{1em}
+\item \pt{1} \tf A superclass constructor can call a subclass constructor.
+
+\Ans False.
+
+
+\vspace{2em}
+\end{enumerate}
+\end{document}
+              

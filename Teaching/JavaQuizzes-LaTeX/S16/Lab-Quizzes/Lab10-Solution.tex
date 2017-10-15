@@ -1,0 +1,86 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\input{header.tex}
+
+\title{Lab 10 Quiz}
+\date{Week 10}
+\begin{document} 
+
+\Instructions
+
+\begin{enumerate}
+\vspace{2em}
+
+\item
+\question \pts{2} Say I have the following class Increment that contains a class variable for a number and has a void method increment(). Complete the class (including field declaration and the described method) such that value being incremented is protected from thread access, lock-out, and race problems. 
+
+\newline
+\begin{lstlisting}
+public class Increment {
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+\end{lstlisting}
+\Ans looking for synchronized block, synchronized method, or AtomicInteger
+\newline
+
+\newline
+\item
+\question \pts{2} Which of these is \textbf{not} a Thread state?
+
+\begin{oneparchoices} 
+\hspace{0.2cm}
+ \choice New\newline
+ 
+ \choice  Sleep \Ans \newline
+ 
+ \choice Runnable \newline
+ 
+ \choice Terminated \newline
+
+\end{oneparchoices}
+
+
+\item \pts{2} \tf  A program that uses Threads may not consistently produce the same output.
+\vspace{1em}
+
+\newline \Ans True
+\newline
+\newline
+Consider the following program for Q4:
+
+\begin{lstlisting}
+public class MyTask implements Runnable {
+    public static void main(String[] args) {
+        MyTask m = new MyTask();
+        Thread t = new Thread(m);
+        
+        t.start();
+    }
+    
+    public void run() {
+        System.out.printf("now in %s\n", Thread.currentThread());
+    }
+}
+
+
+
+
+\end{lstlisting}
+\item \pts{2} How many threads execute during this program?.
+
+\Ans 2. t and main.
+
+
+\vspace{2em}
+\end{enumerate}
+\end{document}
+              

@@ -1,0 +1,67 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\input{header.tex}
+
+\title{Lab 2 Quiz}
+\date{Week 2}
+\begin{document} 
+
+\Instructions
+\begin{enumerate}
+
+\item \pts{4} Break down CS180 into 3 abstractions, each with 2 operations and 2 quantities. \newline
+(e.g. \textit{Wheel} class has an operation \textif{rotate} with a quantity \textit{radius}).
+\newline
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+\textbf{Abstraction (Class)}& \textbf{Operation (Method)}& \textbf{Quantity(Variable)} \\
+\hline
+&   &   \\ 
+\multirow{\textbf{e.g. Student}} & \textbf{e.g. Completes homework, attends lecture} & \textbf{e.g. Name, PUID} \\ 
+&   &   \\ 
+\hline
+&   &   \\
+TA & Answers questions, grades labs  & Name, classification  \\ 
+&   &   \\ 
+\hline
+&   &   \\
+Professor & Lectures material, posts grades  & Name, email  \\ 
+&   &   \\ 
+\hline
+\end{tabular}
+\end{center}
+\Ans These are just examples.
+\vspace{1em}
+
+
+\item \pts{6} Identify in the following program each place where any of these 4 operations occur 
+(6 total occurrences). \newline
+\newline
+1. Get an existing class so that the program can use it. \newline
+2. Make an assignment to a variable \newline
+3. Convert the internal format to a String \newline
+4. Display an output \newline
+\begin{lstlisting}
+import javax.swing.*;                                       (1)
+import java.util.Date;                                      (1)
+
+public class Quiz02 {
+    public static void main(String [] args) {
+        Date today = new Date();                            (2)
+        String s = today.toString();                        (2)(3)
+        System.out.println(s);                              (4)
+    }
+}
+\end{lstlisting}
+
+\newline
+\Ans Lines are marked (#)
+
+
+
+\end{enumerate}
+\end{document}
+              

@@ -1,0 +1,90 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\newcommand{\RN}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\input{header.tex}
+
+\title{Lab 11 Quiz}
+\date{Week 11}
+\begin{document} 
+
+\Instructions
+
+\begin{enumerate}
+\vspace{2em}
+
+
+
+\newline
+
+\item
+\question \pts{3} \tf If an object and all its connected components implement \textsc{Serializable}, then you can read \& write via File I/O.
+
+\newline
+
+\newline
+\item
+\question \pts{4}
+
+
+Consider the following main method for Q4:
+
+\begin{lstlisting}
+public static void main(String[] args) {
+    for(int i = 0; i < args.length; i++) {
+        File f;
+        BufferedReader r;
+        try {
+            f = new File(args[i]);
+            r = new BufferedReader(new FileReader(f));
+        }
+        catch(FileNotFoundException e) {
+		    e.printStackTrace();
+            continue;
+        }
+        finally {
+            System.out.println("Working on file " + args[i]);
+        }
+    }
+}
+\end{lstlisting}
+
+Circle the correct statements:
+\newline
+
+\RN{1}. As soon as a FileNotFoundException is thrown, the catch statement will print a stacktrace and immediately continue executing the for loop.
+
+\RN{2}. As soon as a FileNotFoundException is thrown, the catch statement will print a stacktrace and the program will exit.
+
+\RN{3}. As soon as a FileNotFoundException is thrown, the program will print a stacktrace, execute the finally clause, then continue executing the for loop. 
+
+\RN{4}. When there is no exception, the finally clause will still be executed. 
+
+\RN{5}. The finally clause is only executed when an exception is thrown.
+
+
+
+\item
+\question \pts{3} How should catch statements be ordered when dealing with multiple exceptions? 
+\newline
+\begin{choices} 
+
+ \choice Order doesn't matter 
+ 
+ \choice Exceptions should be ordered from specific to generalized. 
+ 
+ \choice Exceptions should be ordered from generalized to specific. 
+ 
+
+\end{choices}
+
+\newline
+\newline
+
+\vspace{2em}
+\end{enumerate}
+\end{document}
+              

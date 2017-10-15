@@ -1,0 +1,56 @@
+\Instructions 
+  Explain your reasoning to obtain partial credit.
+\begin{enumerate}
+
+Consider the following code for questions 1, 2, 3 and 4
+\begin{lstlisting}
+class A {
+	public A(String msg) { }
+}
+
+class B extends A {
+	public B() {
+		this("Hello World"); /* #1 */
+	}
+
+	public B(String str) {
+		super(str); /* #2 */
+	}
+}
+
+class C extends B {
+}
+
+class Main {
+	public static void main(String[] args) {
+		A ab = new B(); /* #3 */
+		C c = new C(); /* #4 */
+	}
+}
+\end{lstlisting}
+
+\item \pts{2} \tf \#1: calls the superclass Constructor of A immediately. \Ans False
+
+\vspace{2em}
+\item \pts{2} \tf \#2: calls the superclass Constructor of A immediately. \Ans True
+
+\vspace{2em}
+\item \pts{2} \tf \#3: \texttt{ab instanceof A \&\& ab instanceof B} evaluates to true. \Ans True
+
+\vspace{2em}
+\item \pts{2} What is the proper constructor chain for \#4?
+\begin{enumerate}
+\item Will go straight to \texttt{B()}
+\item Will go straight to \texttt{B()} then to \texttt{B(String str)} then to \texttt{A(String msg)}
+\item Will go to default constructor \texttt{C()} then to \texttt{B()} then to \texttt{B(String str)} then to \texttt{A(String msg)}
+\item Will go straight to \texttt{A(String msg)}\\
+\Ans C
+\end{enumerate}
+
+\vspace{2em}
+\item \pts{2} \tf A superclass constructor can call a subclass constructor. \Ans False
+
+
+
+
+\end{enumerate}  
